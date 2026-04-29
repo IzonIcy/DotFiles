@@ -1,0 +1,27 @@
+Config for Ghostty
+
+theme = vesper
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+window-padding-x = 10
+window-padding-y = 10
+keybind = global:cmd+alt+enter=toggle_quick_terminal
+macos-icon = custom-style
+macos-icon-frame = plastic
+macos-icon-ghost-color = #fdfdfd
+macos-icon-screen-color = #0f0f0f
+cursor-style = block
+cursor-opacity = 0.9
+shell-integration-features = no-cursor
+background-opacity = 0.75
+background-blur = 20
+confirm-close-surface = false
+scrollback-limit = 10000
+
+Some tools you need to download for this config:
+- JetBrains Mono Nerd Font: https://www.nerdfonts.com/font-downloads
+- Vesper Theme: which you can get from the Ghostty themes repository: https://github.com/ghostty-org/themes
+
+Some tools that makes ghostty better:
+- Oh My Zsh: https://ohmyz.sh/
+- Powerlevel10k: https://github.com/romkatv/powerlevel10k
