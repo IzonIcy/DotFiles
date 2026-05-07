@@ -1,4 +1,4 @@
-Config for Ghostty
+Config for Ghostty For Tranparent Look!
 
 theme = vesper
 font-family = JetBrainsMono Nerd Font
