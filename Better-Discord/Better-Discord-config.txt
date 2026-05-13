@@ -1,0 +1,22 @@
+/* Force Discord UI to JetBrains family (local Nerd Font first, then web/font fallbacks). */
+:root {
+  --font-primary: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrains Mono", "gg sans", sans-serif;
+  --font-display: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrains Mono", "gg sans", sans-serif;
+  --font-headline: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrains Mono", "gg sans", sans-serif;
+  --font-code: "JetBrainsMono Nerd Font Mono", "JetBrainsMonoNL Nerd Font Mono", "JetBrains Mono", monospace;
+}
+
+html,
+body,
+#app-mount,
+#app-mount *:not(code):not(pre):not([class*="code"]) {
+  font-family: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrains Mono", "gg sans", sans-serif !important;
+}
+
+#app-mount code,
+#app-mount pre,
+#app-mount [class*="code"] {
+  font-family: "JetBrainsMono Nerd Font Mono", "JetBrainsMonoNL Nerd Font Mono", "JetBrains Mono", monospace !important;
+}
+
+guys dont frame me, but i just got better discord today.
