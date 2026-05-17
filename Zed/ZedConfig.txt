@@ -48,3 +48,5 @@
     "dark": "Cursor Dark"
   },
 }
+
+this will not be updated anymore, because i have switched over to neo vim!
