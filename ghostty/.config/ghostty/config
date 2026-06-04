@@ -1,0 +1,40 @@
+# Window Appearance
+macos-titlebar-style = hidden
+title = " "
+macos-titlebar-proxy-icon = hidden
+background-opacity = 1
+# background-blur-radius = 75
+theme = idea-soft-blue
+clipboard-read = allow
+
+# for non-rounded window
+# window-decoration = false
+# macos-window-shadow = false
+# macos-titlebar-style = native
+
+# Window Dimensions and Padding
+window-height = 27
+window-width = 77
+window-padding-x = 12
+window-padding-y = 12
+
+# Fonts and Text
+# font-family = Lilex
+font-family = Cohere Mono 
+font-size = 15
+
+
+# Cursor and Shell Integration
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-click-to-move = true
+clipboard-read=allow
+clipboard-write=allow
+
+# Visual Enhancements
+# custom-shader = ~/mnoise.glsl
+window-vsync = true
+unfocused-split-opacity = 1
+# Commented or Optional Settings
+# background-opacity = 0.75
+keybind = shift+enter=text:\n
