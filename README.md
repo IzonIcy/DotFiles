@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dotfiles
 
 my personal dotfiles for macOS.
@@ -33,3 +34,9 @@ Each directory contains dotfiles for specific tools. Follow the individual setup
 ## Compatible Systems
 
 these dots should work on most *nix systems.
+=======
+# DotFiles
+my personal dotfiles for macOS.
+
+This is where you can find my config files for various mac os apps and Terminal (CLI) apps!
+>>>>>>> origin/main
