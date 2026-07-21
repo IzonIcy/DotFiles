@@ -1,35 +1,51 @@
-# Dotfiles
+# dotfiles
 
-my personal dotfiles for macOS.
+My macOS config files, managed with GNU Stow. Every file here is the result of some real frustration that led to a configuration change — there's nothing that was set up "just in case."
 
-## Contents
+## What's inside
 
-- **claude**: [Claude Code](https://github.com/anthropics/claude-code) CLI config
-- **equibop**: [Equicord](https://equicord.org/) Discord client config
-- **flow**: [Flow Control](https://flow-control.dev/) editor config
-- **ghostty**: [Ghostty](https://ghostty.org/) terminal dots
-- **nvim**: [Neovim](https://neovim.io) editor config
-- **opencode**: [OpenCode](https://github.com/anomalyco/opencode) AI config
-- **pi**: [Pi](https://github.com/badlogic/pi-mono) coding agent config
-- **raycast**: [Raycast](https://raycast.com) extension dots
+| Directory   | Tool |
+|-------------|------|
+| `claude/`   | Claude Code CLI |
+| `equibop/`  | Equicord Discord client |
+| `flow/`     | Flow Control editor |
+| `ghostty/`  | Ghostty terminal |
+| `nvim/`     | Neovim |
+| `opencode/` | OpenCode |
+| `pi/`       | Pi coding agent |
+| `raycast/`  | Raycast |
 
-## Installation
-
-Clone this repository to your home directory:
+## Setup
 
 ```bash
 git clone https://github.com/plyght/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+stow claude equibop flow ghostty nvim opencode pi raycast
 ```
 
-Then (_I_) use [Stow](https://www.gnu.org/software/stow/) to symlink to ~/.config (or wherever your config dir is)
+If you only want certain ones:
+
 ```bash
-stow claude & stow equibop & stow flow & stow ghostty & stow nvim & stow opencode & stow pi & stow raycast
+stow nvim ghostty
 ```
 
-## Usage
+To undo:
 
-Each directory contains dotfiles for specific tools. Follow the individual setup instructions in each directory.
+```bash
+stow -D nvim
+```
 
-## Compatible Systems
+## Adding something
 
-these dots should work on most *nix systems.
+```bash
+mkdir -p tmux/.config/tmux
+cp ~/.config/tmux/tmux.conf tmux/.config/tmux/tmux.conf
+stow tmux
+```
+
+The directory structure mirrors where the config lives relative to `$HOME`. Stow figures out the symlinks.
+
+## Notes
+
+- No secrets in here. API keys live in gitignored files like `.zshrc.local`.
+- Tested on macOS. Most of it should work on Linux too.
