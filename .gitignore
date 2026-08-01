@@ -103,3 +103,6 @@ logs/
 .idea/tasks.xml
 # OpenCode config
 opencode.json
+
+# backup files
+*.bak
