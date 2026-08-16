@@ -106,3 +106,8 @@ opencode.json
 
 # backup files
 *.bak
+
+# Agent instruction files
+AGENTS.md
+CLAUDE.md
+.github/copilot-instructions.md
