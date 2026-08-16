@@ -10,20 +10,17 @@ permissions:
 
 jobs:
   check:
-    name: Typecheck
+    name: Validate
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Syntax check install.sh
+        run: bash -n install.sh
 
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-
-      - name: Type check
-        run: bunx tsc --noEmit
-
-      - name: Test
-        run: bun test || true
+      - name: Verify stow packages exist
+        run: |
+          for pkg in claude equibop flow ghostty gitu nvim opencode pi; do
+            test -d "$pkg" || { echo "missing package: $pkg"; exit 1; }
+          done

@@ -10,17 +10,17 @@ My macOS config files, managed with GNU Stow. Every file here is the result of s
 | `equibop/`  | Equicord Discord client |
 | `flow/`     | Flow Control editor |
 | `ghostty/`  | Ghostty terminal |
+| `gitu/`     | Git UI |
 | `nvim/`     | Neovim |
 | `opencode/` | OpenCode |
 | `pi/`       | Pi coding agent |
-| `raycast/`  | Raycast |
 
 ## Setup
 
 ```bash
-git clone https://github.com/plyght/dotfiles.git ~/dotfiles
+git clone https://github.com/IzonIcy/DotFiles.git ~/dotfiles
 cd ~/dotfiles
-stow claude equibop flow ghostty nvim opencode pi raycast
+./install.sh
 ```
 
 If you only want certain ones:
