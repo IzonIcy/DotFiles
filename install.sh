@@ -14,13 +14,46 @@ if ! command -v stow >/dev/null 2>&1; then
   exit 1
 fi
 
+MODE="stow"
+STOW_FLAGS=()
+case "${1:-}" in
+  --check)
+    # Simulate only: report what would be linked and any conflicts, change nothing.
+    MODE="check"
+    STOW_FLAGS=("-n")
+    ;;
+  "")
+    ;;
+  *)
+    echo "usage: $0 [--check]" >&2
+    exit 1
+    ;;
+esac
+
+failures=0
 for pkg in "${PACKAGES[@]}"; do
   if [[ ! -d "$pkg" ]]; then
     echo "error: package '$pkg' is missing" >&2
     exit 1
   fi
-  stow "$pkg"
-  echo "stowed $pkg"
+  if stow "${STOW_FLAGS[@]}" "$pkg"; then
+    if [[ "$MODE" == "check" ]]; then
+      echo "ok       $pkg"
+    else
+      echo "stowed   $pkg"
+    fi
+  else
+    failures=$((failures + 1))
+    echo "CONFLICT $pkg (existing files block stowing)"
+  fi
 done
 
-echo "All packages stowed."
+if [[ "$MODE" == "check" ]]; then
+  if (( failures > 0 )); then
+    echo "$failures package(s) would conflict — resolve them before running without --check."
+    exit 1
+  fi
+  echo "All packages can be stowed cleanly."
+else
+  echo "All packages stowed."
+fi
