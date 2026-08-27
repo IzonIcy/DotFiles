@@ -20,7 +20,7 @@ cask "ghostty"
 # Discord client (equibop/ config)
 cask "equibop"
 
-# Shell toolchain used by ~/.zshrc (zshrc lives outside stow packages)
+# Shell toolchain (zshrc uses these; fish is a brew package)
 brew "ripgrep"
 brew "direnv"
 # mise owns node/python/rust/bun versioning; fnm + nvm were removed

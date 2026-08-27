@@ -107,7 +107,7 @@ opencode.json
 # backup files
 *.bak
 
-# Agent instruction files
+# Agent instruction files (nested copies in subpackages like opencode/ are intentional)
 AGENTS.md
 CLAUDE.md
 .github/copilot-instructions.md

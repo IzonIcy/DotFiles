@@ -940,9 +940,7 @@
             "attachmentFileExtensions": "png,jpg,jpeg,gif,webp,mp4,webm,mp3,ogg,wav",
             "cacheLimit": 150,
             "whitelistedIds": "",
-            "blacklistedIds": "",
-            "imageCacheDir": "/Users/nicojaffer/Library/Application Support/equibop/MessageLoggerData/savedImages",
-            "logsDir": "/Users/nicojaffer/Library/Application Support/equibop/MessageLoggerData"
+            "blacklistedIds": ""
         },
         "MessageTranslate": {
             "enabled": false

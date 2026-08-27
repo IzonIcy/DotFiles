@@ -27,7 +27,6 @@ fi
 
 ok=0
 patched=0
-skipped=0
 missing=0
 
 apply_one() {
@@ -63,7 +62,7 @@ while IFS= read -r -d '' f; do
 done < <(find "$FILES_DIR" -type f -print0)
 
 echo
-echo "summary: $ok already up-to-date, $patched newly patched, $missing missing, $skipped skipped"
+echo "summary: $ok already up-to-date, $patched newly patched, $missing missing"
 
 if [[ $missing -gt 0 ]]; then
   echo

@@ -36,7 +36,9 @@ for pkg in "${PACKAGES[@]}"; do
     echo "error: package '$pkg' is missing" >&2
     exit 1
   fi
-  if stow "${STOW_FLAGS[@]}" "$pkg"; then
+  # ${VAR[@]+...} guards empty-array expansion: bash 3.2 treats
+  # "${STOW_FLAGS[@]}" as unbound under set -u when the array is empty.
+  if stow ${STOW_FLAGS[@]+"${STOW_FLAGS[@]}"} "$pkg"; then
     if [[ "$MODE" == "check" ]]; then
       echo "ok       $pkg"
     else
